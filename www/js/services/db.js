@@ -69,7 +69,7 @@ angular.module("starter.services",[])
     return DBA.query("DELETE FROM users WHERE id = (?)", parameters);
   }
 
-   self.update = function(editUser) {
+  self.update = function(editUser) {
     var parameters = [editUser.name, editUser.id];
     return DBA.query("UPDATE users SET name = (?) WHERE id = (?)", parameters);
   }
