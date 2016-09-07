@@ -1,0 +1,45 @@
+<ion-view title="formulario" >
+	<ion-content>
+        <form name="form" ng-submit="send(formData)">
+          <div class="list">
+          	<label class="item item-input">
+              <input type="text" name="textForm" placeholder="nombre" ng-model="formData.name" required>          		
+          	</label>
+          	<div class="item item-toggle">
+          	  extrangero
+          	  <label class="toggle toggle-calm">
+                <input type="checkbox" ng-model="formData.toggle">
+                <div class="track">
+                	<div class="handle"></div>
+                </div>          	  	
+          	  </label>
+           	</div>
+           	<div class="item item-checkbox">
+           		<label class="checkbox">
+           			<input type="checkbox" ng-model="formData.chek">
+           		</label>
+           		soltero
+           	</div>
+           	<ion-list>
+               <ion-radio ng-model="formData.radio" ng-value="'si'">si</ion-radio>
+               <ion-radio ng-model="formData.radio" ng-value="'no'">no</ion-radio>
+            </ion-list>
+           	
+           	<label class="item item-input item">
+           	 <div class="input-label">
+           	 	select
+           	 </div>
+           	 <select ng-model="formData.select">
+           	    <option value="1">azul</option>
+           	    <option value="2">rojo</option>
+           	 	<option value="3">negro</option>
+           	 </select>
+           	</label>
+           	<button class="button button-block button-positive" ng-disabled="!form.$valid" type="submit">
+           		submit
+           	</button>
+            </div>
+        	
+        </form>
+  </ion-content>
+</ion-view>
